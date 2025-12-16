@@ -1,10 +1,11 @@
 #include <iostream>
+#include <limits>
 using namespace std;
 
 void encode() {
     string in_mess;
     cout<<"Enter the message to encode: "<<endl;
-    cin.ignore();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     getline(cin, in_mess);
     
     int mess_val[100];
@@ -89,10 +90,11 @@ void encode() {
 }
 
 void decode() {
+    //for decoding
     
     string in_mess;
     cout<<"Enter the message to decode: "<<endl;
-    cin.ignore();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     getline(cin, in_mess);
     
     int mess_val[100];
